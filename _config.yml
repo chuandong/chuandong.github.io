@@ -103,5 +103,5 @@ theme: landscape
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/chuandong/chuandong.github.io
+  repo: git@github.com:chuandong/chuandong.github.io.git
   branch: master
