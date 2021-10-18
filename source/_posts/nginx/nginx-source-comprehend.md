@@ -1,4 +1,11 @@
-nginx源代码0.1.0版本阅读
+---
+title: nginx源代码0.1.0版本阅读
+date: 2021-10-18 19:03:00
+categories:
+- Nginx # 这是分类，直接写就好，他会自定创建，tags 也是一样
+tags:
+- nginx # 这是标签
+---
 
 ```sh
 /* Standard file descriptors. */

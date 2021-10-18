@@ -1,4 +1,11 @@
-Nginx理论知识
+---
+title: Nginx理论知识
+date: 2021-10-18 19:03:00
+categories:
+- Nginx # 这是分类，直接写就好，他会自定创建，tags 也是一样
+tags:
+- nginx # 这是标签
+---
 
 Nginx适用于哪些场景：
 
