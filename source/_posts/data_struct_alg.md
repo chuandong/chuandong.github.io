@@ -1,0 +1,206 @@
+**数据结构和算法**
+
+**拨云见日，看清数据结构**
+
+遇到一个实际问题，需要解决两个事情：
+
+（1） 如何将数据存储在计算机中；
+
+（2） 用什么方法策略解决问题。
+
+前者是数据结构，后者是算法。只有数据结构没有算法，相当于只把数据存储到计算机中而没有有效的方法去处理，就像一幢只有框架的烂尾楼；若只有算法，没有数据结构，就像沙漠里的海市蜃楼，只不过是空中楼阁罢了。
+
+数据是一切能输入到计算机的信息总和，结构是指数据之间的关系，数据结构就是将数据及其之间的关系有效地存储在计算机中。算法是指对特定问题求解步骤的一种描述，说白了就是解决问题的方法策略。数据结构和算法不依赖于语言，什么语言无所谓。但是如果上机实现的话，就要使用计算机语言。
+
+遇到一个实际问题，充分利用所学的数据结构，将数据及其之间的关系有效地存储在计算机中，然后选择合适的算法策略，并用程序高效实现，这就是N.Wirth教授所说的：**数据结构+算法＝程序**。（数据结构研究的是数据与数据之间的关系）
+
+
+
+数据结构（Data Structures）主要是指数据和关系的集合，数据指的是计算机中需要处理的数据，而关系指的是这些数据相关的前后逻辑，这些逻辑与计算机储存的位置无关，其主要包含以下四大逻辑结构。
+
+
+
+链表中的数据是以结点来表示的，每个结点的构成：元素(数据元素的映象) + 指针(指示后继元素存储位置)，元素就是存储数据的存储单元，指针就是连接每个结点的地址数据。
+
+**1. 链表**
+1）头插法(无头结点)：
+头指针域指向申请结点的指针域--》申请的结点指向头指针域。
+
+2）头插法(申请头结点)：
+
+头结点指向申请结点的指针域--》申请的结点指向头结点。
+
+3）尾插法(申请头结点)：
+
+申请结点指向头结点的指针域--》申请结点指向头结点。
+
+​	
+
+```c
+#include "dong.h"
+typedef int DATATYPE;
+
+typedef struct node{
+	DATATYPE data;
+	struct node *next;
+}nodelist, *linklist;
+
+linklist list_init()
+{
+	nodelist *L;
+
+	L = (nodelist *)malloc(sizeof(nodelist));
+	if (L == NULL)
+	{
+    	printf("malloc error.\n");
+    	exit (-1);
+	}
+
+	L->next = NULL;
+
+	return L;
+}
+/*无头结点插入*/
+linklist list_head_insert()
+{
+	int i;
+	nodelist *L, *tmplist;
+
+	L = (nodelist *)malloc(sizeof(nodelist));
+	if (L == NULL)
+	{
+    	printf("malloc error.\n");
+    	exit (-1);
+	}
+	L->next = NULL;
+
+	for (i = 0; i < 10; i++)
+	{
+    	tmplist = (nodelist *)malloc(sizeof(nodelist));
+    	if (tmplist == NULL)
+    	{
+        	printf("malloc error.\n");
+        	exit (-1);
+    	}
+    
+    	tmplist->data = i;
+    	tmplist->next = L->next;
+    	L->next = tmplist;
+	}
+
+	return L;
+}
+/*申请头结点插入*/
+linklist list_head_insert1()
+{
+	int i;
+	nodelist *L, *tmplist;
+
+	L = (nodelist *)malloc(sizeof(nodelist));
+	if (L == NULL)
+	{
+    	printf("malloc error.\n");
+    	exit (-1);
+	}
+	L->next = NULL;
+
+	for (i = 0; i < 10; i++)
+	{
+    	tmplist = (nodelist *)malloc(sizeof(nodelist));
+    	if (tmplist == NULL)
+    	{
+        	printf("malloc error.\n");
+        	exit (-1);
+    	}
+    
+    	tmplist->data = i;
+    
+    	tmplist->next = L;
+    	L = tmplist;
+	}
+
+	return L;
+}
+/*尾插入*/
+linklist list_end_insert()
+{
+	int i;
+
+	nodelist *L;
+
+	L = (nodelist *) malloc (sizeof(nodelist));
+	assert(L != NULL);
+
+	L->next = NULL;
+
+	nodelist *p = L;  /*头指针*/
+
+	for (i = 0; i < 10; i++)
+	{
+    	nodelist *s = (nodelist *) malloc (sizeof(nodelist));
+    	assert(s != NULL);
+    
+    	s->data = i;
+    	s->next = NULL;
+    
+    	p->next = s;
+    	p = s;
+	}
+
+	return L;
+}
+
+linklist list_show(nodelist *L)
+{
+	nodelist *p = L->next;
+
+	while (p)
+	{
+    	printf("%d ", p->data);
+    	p = p->next;
+	}
+
+	printf("\n");
+}
+
+linklist list_show_1(nodelist *L)
+{
+	nodelist *p = L;
+
+	while (p)
+	{
+    	printf("%d ", p->data);
+    	p = p->next;
+	}
+
+	printf("\n");
+}
+
+int main(int argc, char *argv[])
+{
+	int iRet = 0;
+	int *retval;
+
+	linklist list;
+
+	list = list_init();
+	if (retval == NULL)
+	{
+    	printf("list_init error.\n");
+    	return -1;
+	}
+
+	list = list_head_insert();
+	list_show(list);
+
+	list = list_end_insert();
+	list_show(list);
+
+	list = list_head_insert1();
+	list_show_1(list);
+
+	return 0;
+}
+```
+
+
