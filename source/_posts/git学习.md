@@ -77,7 +77,7 @@ tags: git
     	git push  origin master 
     	git push -f origin master(强制覆盖推送，不推荐使用)
     	--set-upstream 推送到远端的同时并且建立起和远端分支的关联关系。
-    		git push --set-upstream origiin master
+    		git push --set-upstream origin master
     ```
 
 -   克隆仓库
