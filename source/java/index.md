@@ -6,8 +6,8 @@ type: "java"
 
 # java study
 
-- [java学习: 语法](java_study_1.md)
+- [java学习: 语法](java_study_1.html)
 
-- [java学习:代码](java_study_2.md)
+- [java学习:代码](java_study_2.html)
 
     
