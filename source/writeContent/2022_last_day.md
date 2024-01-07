@@ -11,15 +11,15 @@ description: 2022 years review
 
 ​	外公的真名叫李欠生，1933年08月04日出生，91岁的时候走了；
 
-​	<img src=".assets/gradefather_1.jpg" alt="外公" style="zoom:80%;" />
+​	<img src="./.assets/gradefather_1.jpg" alt="外公" style="zoom:80%;" />
 
-<img src=".assets/gradefather_2.jpg" alt="外公" style="zoom:80%;" />
+<img src="./.assets/gradefather_2.jpg" alt="外公" style="zoom:80%;" />
 
 ​	外婆的真名叫邵玉妹，1934年11月25日出生，90岁的时候走了；
 
-​	<img src=".assets/grademother_1.jpg" alt="外婆" style="zoom:80%;" />
+​	<img src="./.assets/grademother_1.jpg" alt="外婆" style="zoom:80%;" />
 
-<img src=".assets/grademother_2.jpg" alt="外婆" style="zoom:80%;" />
+<img src="./.assets/grademother_2.jpg" alt="外婆" style="zoom:80%;" />
 
 ​	外公外婆如果照顾得当，估计现在还能健在，是我们后辈没有能力让他们的福分留在这人间；
 
