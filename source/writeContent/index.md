@@ -6,6 +6,8 @@ type: "writeContent"
 
 # 写的内容
 
-- [2021年的总结](2021_last_day)
-- [2022年的总结](2022_last_day)
-- [2023年的总结](2023_last_day)
+- [2021年的总结](2021_last_day.html)
+- [2022年的总结](2022_last_day.html)
+- [2023年的总结](2023_last_day.html)
+- [读书的方法](读书的方法.html)
+- [记忆方法](记忆方法.html)

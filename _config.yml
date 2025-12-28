@@ -4,7 +4,7 @@
 
 # Site
 title: 东东的学习历程
-subtitle: ""
+subtitle: "保留生活的痕迹"
 description: 学习的记录
 keywords:
 author: ChuanDongLiu
@@ -13,7 +13,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://liuchuandong.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -103,5 +103,5 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:chuandong/chuandong.github.io.git
+  repo: https://chuandong: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@github.com/chuandong/chuandong.github.io
   branch: master
