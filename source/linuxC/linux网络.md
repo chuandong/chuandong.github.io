@@ -63,6 +63,16 @@ struct in_addr{
 >    //接收时限
 >    setsockopt(socket，SOL_S0CKET,SO_RCVTIMEO，(char *)&nNetTimeout,sizeof(int));
 >
+>    **还可以使用 
+>
+>    ​	signal(SIGALRM, alarm_handler);
+>
+>    ​	alarm(5);
+>
+>    ​	send(fd, buf, strlen(buf)+1);  /*如果在send发送超时的时候，alarm_handler()函数就会调起*/
+>
+>    ​	alarm(0); /*如果send函数没有超时，去掉alarm(5)设置的超时5s*/
+>
 > 4. 在send()的时候，返回的是实际发送出去的字节(同步)或发送到socket缓冲区的字节
 >    (异步);系统默认的状态发送和接收一次为8688字节(约为8.5K)；在实际的过程中发送数据
 >    和接收数据量比较大，可以设置socket缓冲区，而避免了send(),recv()不断的循环收发：

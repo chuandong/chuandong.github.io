@@ -625,6 +625,42 @@ fn main() {
 }
 ```
 
+#### 闭包
+
+```rust
+fn main() {
+    /*闭包从 || 开始*/
+    let hello =  || println!("Hello, World!");
+    hello();
+    /*闭包形式*/
+    let cubed = |number:usize| -> usize {
+        number * 10
+    };
+
+    let result = cubed(5);
+    println!("Result = {}", result);
+    /*极简形式*/
+    let cubed1 = |number| number * 10;
+    let result = cubed1(5);
+    println!("Result = {}", result);
+}
+
+```
+
+##### 闭包作为函数参数
+
+```rust
+fn do_closure(closure: impl Fn()) {
+    closure();
+}
+
+fn main() {
+    let hello = || println!("hello, world!");
+    do_closure(hello);
+}
+
+```
+
 
 
 #### trait
